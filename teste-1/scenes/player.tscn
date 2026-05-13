@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ca0ne6sscdvb8"]
+
+[ext_resource type="Script" uid="uid://1k4qtsstps3e" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://e3d45o6ohccg" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_duck.png" id="2_qhqgy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
+radius = 20.871435
+height = 62.614304
+
+[node name="Player" type="CharacterBody2D" unique_id=210345371]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1245901204]
+texture = ExtResource("2_qhqgy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1966929604]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1208340230]
+position = Vector2(-9.947598e-14, 3.9999998)
+rotation = 0.2617994
+shape = SubResource("CapsuleShape2D_dqkch")
